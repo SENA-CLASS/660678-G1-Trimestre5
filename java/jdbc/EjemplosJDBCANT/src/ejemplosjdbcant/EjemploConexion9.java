@@ -49,6 +49,7 @@ public class EjemploConexion9 {
 
                     System.out.println("------------------------------------------------------");
                 }
+                System.out.println("hola mundo");
 
                 String nombreProduto = JOptionPane.showInputDialog("digite el nombre del producto");
                 String talla = JOptionPane.showInputDialog("digite la talla del producto");
