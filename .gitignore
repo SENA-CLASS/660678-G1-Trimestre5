@@ -13,7 +13,12 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+#Java files
 *.jar
+*.class
+
+
 
 # Windows shortcuts
 *.lnk
