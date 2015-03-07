@@ -39,7 +39,10 @@ public class EjemploConexion9 {
             rs = sentencia.executeQuery(sql);
 
             if (rs.next() == true) {
+                
+                if (!rs.isFirst()){
                 rs.beforeFirst();
+                }
                 while (rs.next() == true) {
                     System.out.println("id producto: " + rs.getString(1));
                     System.out.println("nombre producto: " + rs.getString(2));
@@ -49,11 +52,7 @@ public class EjemploConexion9 {
 
                     System.out.println("------------------------------------------------------");
                 }
-                System.out.println("hola mundo");
-                
-                System.out.println("cambio en repositorio");
-                
-                System.out.println("hola mundo pull request");
+               
                 
 
                 String nombreProduto = JOptionPane.showInputDialog("digite el nombre del producto");
@@ -68,7 +67,7 @@ public class EjemploConexion9 {
                         + "WHERE `id_producto` = '"+idProduto+"';";
                 
                 sentencia = conexion.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
-
+                    
                 int resultado = sentencia.executeUpdate(sql2);
 
                 if (resultado == 1) {
