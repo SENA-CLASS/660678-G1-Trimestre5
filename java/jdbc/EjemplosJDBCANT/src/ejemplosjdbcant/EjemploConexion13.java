@@ -64,8 +64,7 @@ public class EjemploConexion13 {
             System.out.print(rsMetaData.getColumnTypeName(3)+"\t");
             System.out.print(rsMetaData.getColumnTypeName(4)+"\n");
             
-            System.out.println(rsMetaData.getCatalogName(1));
-            System.out.println(rsMetaData.getCatalogName(2));
+            
             if (rs.next() == true) {
 
                     if (!rs.isFirst()){
