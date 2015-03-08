@@ -10,13 +10,14 @@ import java.sql.CallableStatement;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 /**
  *
  * @author Enrique Moreno
  */
-public class EjemploConexion11 {
+public class EjemploConexion13 {
 
     /**
      * @param args the command line arguments
@@ -51,6 +52,20 @@ public class EjemploConexion11 {
             
             rs = sentencia.getResultSet();
             
+            ResultSetMetaData rsMetaData = rs.getMetaData();
+            
+            System.out.print(rsMetaData.getColumnName(1)+"\t");
+            System.out.print(rsMetaData.getColumnName(2)+"\t");
+            System.out.print(rsMetaData.getColumnName(3)+"\t");
+            System.out.print(rsMetaData.getColumnName(4)+"\n");
+            
+            System.out.print(rsMetaData.getColumnTypeName(1)+"\t");
+            System.out.print(rsMetaData.getColumnTypeName(2)+"\t");
+            System.out.print(rsMetaData.getColumnTypeName(3)+"\t");
+            System.out.print(rsMetaData.getColumnTypeName(4)+"\n");
+            
+            System.out.println(rsMetaData.getCatalogName(1));
+            System.out.println(rsMetaData.getCatalogName(2));
             if (rs.next() == true) {
 
                     if (!rs.isFirst()){
