@@ -1,0 +1,5 @@
+FATAL main Ejemplo1Log4J.class - esto es un error fatal
+ERROR main Ejemplo1Log4J.class - esto es un error
+WARN main Ejemplo1Log4J.class - esto es una alvertencia
+INFO main Ejemplo1Log4J.class - esto es un mensaje de información
+DEBUG main Ejemplo1Log4J.class - esto es un mensaje de debug
