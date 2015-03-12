@@ -20,6 +20,7 @@ public class Ejemplo1Log4J {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Throwable{
+        
          Logger log = Logger.getLogger("Ejemplo1Log4J.class");
          
          PropertyConfigurator.configure("log4jDB.properties");
