@@ -18,6 +18,13 @@ $RECYCLE.BIN/
 *.jar
 *.class
 
+#mysql worbench temporales
+*.bak
+
+#Directorios java que no son necesarios
+target/
+dist/
+
 
 
 # Windows shortcuts
