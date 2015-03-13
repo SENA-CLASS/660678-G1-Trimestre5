@@ -4,12 +4,19 @@
  * and open the template in the editor.
  */
 
-package edu.co.sena.onlineshop.integracion.logging;
+package contacteditor;
 
 /**
  *
  * @author Enrique Moreno
  */
-public interface Log4JConfiguration {
-    public final static String PROPERTIES = "log4j.properties";
+public class ContactEditor {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
+    
 }
