@@ -18,6 +18,13 @@ $RECYCLE.BIN/
 *.jar
 *.class
 
+#mysql worbench temporales
+*.bak
+
+#Directorios java que no son necesarios
+target/
+dist/
+
 
 
 # Windows shortcuts
@@ -51,7 +58,10 @@ Temporary Items
 /java/DAOGenerados/OnlineShopIntegracionJDBCSoutDD/target/
 /java/DAOGenerados/OnlineShopIntegracionJDBCLog4JDD/target/
 /java/EjemploLog4J/target/
+<<<<<<< HEAD
 /java/jpa/Ejemplo2JPACliente/target/
 /java/jpa/GUIFormExamples/nbproject/private/
 /java/jpa/ContactEditor/nbproject/private/
 /java/jpa/ContactEditor/build/
+=======
+>>>>>>> origin/master
