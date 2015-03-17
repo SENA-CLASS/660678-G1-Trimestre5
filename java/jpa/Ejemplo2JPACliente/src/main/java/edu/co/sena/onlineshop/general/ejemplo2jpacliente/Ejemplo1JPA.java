@@ -20,16 +20,16 @@ public class Ejemplo1JPA {
      */
     public static void main(String[] args) {
         
-            EntityManagerFactory emfabrica1 = Persistence.createEntityManagerFactory("edu.co.sena.onlineshop.general_Ejemplo2JPACliente1");
+            EntityManagerFactory emfabrica1 = Persistence.createEntityManagerFactory(ConfiguracionJPA.UNIT_PERS);
             
             EntityManager em1 = emfabrica1.createEntityManager();
             
             em1.getTransaction().begin();
-            Employee emp = new Employee(159);
+            Employee emp = new Employee(160);
             emp.setName("dfdsfasdf");
             emp.setSalary(341423);
             
-            em1.persist(emp);
+            em1.merge(emp);
             
             em1.getTransaction().commit();
             

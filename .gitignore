@@ -65,3 +65,10 @@ Temporary Items
 /java/jpa/ContactEditor/build/
 =======
 >>>>>>> origin/master
+/java/jpa/EJBModule1/nbproject/private/
+/java/jpa/WebApplication1/nbproject/private/
+/java/jpa/EnterpriseApplication1/nbproject/private/
+/java/jpa/EnterpriseApplication1/EnterpriseApplication1-war/nbproject/private/
+/java/jpa/EnterpriseApplication1/EnterpriseApplication1-ejb/nbproject/private/
+/java/jpa/EnterpriseApplication1/EnterpriseApplication1-ejb/build/
+/java/jpa/EnterpriseApplication1/EnterpriseApplication1-war/build/

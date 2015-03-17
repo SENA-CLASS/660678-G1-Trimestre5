@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author Enrique Moreno
  */
-@Entity
+@Entity ()
 @Table(name = "employyed")
 @XmlRootElement
 public class Employee implements Serializable{
