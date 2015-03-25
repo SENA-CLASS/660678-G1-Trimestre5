@@ -26,7 +26,7 @@ public class CategoriaAPPHibernate {
         c1.setNombre("categoria 1");
         c1.setPariente(0);
        
-        EntityManagerFactory emf1 = Persistence.createEntityManagerFactory("edu.co.sena_OnlineShop_jar_1.0-SNAPSHOTPU2");
+        EntityManagerFactory emf1 = Persistence.createEntityManagerFactory("edu.co..0-SNAPSHOTPU2");
         EntityManager em1 = emf1.createEntityManager();
         em1.getTransaction().begin();
 

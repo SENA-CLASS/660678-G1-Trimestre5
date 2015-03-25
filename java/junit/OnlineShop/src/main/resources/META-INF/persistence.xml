@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="edu.co.sena_OnlineShop_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.Item</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.Catalogo</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.Categoria</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.InventarioCompras</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.Factura</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.Departamento</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.Proveedor</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.ItemCarrito</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.DomicilioCuentas</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.DomicilioProvee</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.Pago</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.Municipio</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.Usuario</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.Producto</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.Cuenta</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.Pedido</class>
+    <class>edu.co.sena.onlineshop.inegracion.jpa.entities.CarritoCompras</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/onlineshop?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="123456789"/>
+      <property name="eclipselink.logging.level" value="FINE"/>
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
+    </properties>
+  </persistence-unit>
+</persistence>
