@@ -29,7 +29,7 @@ public class Ejemplo1JPA {
             emp.setName("dfdsfasdf");
             emp.setSalary(341423);
             
-            em1.merge(emp);
+            em1.persist(emp);
             
             em1.getTransaction().commit();
             

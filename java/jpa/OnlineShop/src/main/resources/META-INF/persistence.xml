@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="edu.co.sena_OnlineShop_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.Pedido</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.Proveedor</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.Catalogo</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.Municipio</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.CarritoCompras</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.Producto</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.Item</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.Pago</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.InventarioCompras</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.Departamento</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.DomicilioProvee</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.Categoria</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.ItemCarrito</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.Factura</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.Usuario</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.Cuenta</class>
+    <class>edu.co.sena.onlineshop.integracion.jpa.entities.DomicilioCuentas</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/onlineshop2?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="123456789"/>
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
+      <property name="eclipselink.logging.level" value="WARNING"/>
+      
+      <property name="eclipselink.logging.level.sql" value="FINEST"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="edu.co.sena_OnlineShop_jar_1.0-SNAPSHOTPU2" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/onlineshop2?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="123456789"/>
+     <!-- <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>-->
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="create"/>    
+    </properties>
+  </persistence-unit>
+</persistence>
