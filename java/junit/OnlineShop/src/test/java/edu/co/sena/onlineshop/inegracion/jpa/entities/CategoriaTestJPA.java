@@ -5,6 +5,7 @@
  */
 package edu.co.sena.onlineshop.inegracion.jpa.entities;
 
+import edu.co.sena.onlineshop.inegracion.jpa.util.EntityManagerHelper;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -39,21 +40,15 @@ public class CategoriaTestJPA {
     @Before
     public void setUp() {
         categoria= new Categoria();
-        categoria.setIdCategoria(1);
         categoria.setNombre("categoria prueba");
         categoria.setPariente(0);
         categoria.setActiva(Boolean.TRUE);
-        
-        emf = Persistence.createEntityManagerFactory("edu.co.sena_OnlineShop_jar_1.0-SNAPSHOTPU");
-        em = emf.createEntityManager();
-        em.getTransaction().begin();
-    
+       
     }
     
     @After
     public void tearDown() {
-        em.close();
-        emf.close();
+        
         
     }
 
@@ -65,8 +60,12 @@ public class CategoriaTestJPA {
     @Test
     public void insertarCategoria(){
         
+        em = EntityManagerHelper.getEntityManager();
+        EntityManagerHelper.beginTransaction();
         em.persist(categoria);
-        em.getTransaction().commit();
+        EntityManagerHelper.commit();
+        EntityManagerHelper.closeEntityManager();
+        
         
     
     }

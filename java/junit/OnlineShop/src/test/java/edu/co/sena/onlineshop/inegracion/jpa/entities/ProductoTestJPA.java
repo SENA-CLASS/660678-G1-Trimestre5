@@ -5,6 +5,7 @@
  */
 package edu.co.sena.onlineshop.inegracion.jpa.entities;
 
+import edu.co.sena.onlineshop.inegracion.jpa.util.EntityManagerHelper;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -14,19 +15,18 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import edu.co.sena.onlineshop.inegracion.jpa.util.EntityManagerHelper;
 
 /**
  *
  * @author hernando
  */
-public class CatalogoTestJPA {
+public class ProductoTestJPA {
     
-    Catalogo catalogo;
+    Producto producto;
+    EntityManagerFactory emf;
     EntityManager em;
     
-    
-    public CatalogoTestJPA() {
+    public ProductoTestJPA() {
     }
     
     @BeforeClass
@@ -39,10 +39,14 @@ public class CatalogoTestJPA {
     
     @Before
     public void setUp() {
-        catalogo= new Catalogo();
-        catalogo.setDecripcion("catalogo 1 de prueba");
-        catalogo.setNombreCatalogo("catalogo 1 prueba");
-        
+       producto = new Producto();
+       producto.setIdProducto("00002");
+       producto.setActivo(true);
+       producto.setNombreProducto("nombre producto prueba");
+       producto.setCatalogoIdCatalogo(new Catalogo(1));
+       producto.setCategoriaIdCategoria(new Categoria(1));
+       
+       
     }
     
     @After
@@ -56,13 +60,15 @@ public class CatalogoTestJPA {
     // public void hello() {}
     
     @Test
-    public void insertarCatalogo(){
+    public void insertarProducto(){
         
         em = EntityManagerHelper.getEntityManager();
         EntityManagerHelper.beginTransaction();
-        em.persist(catalogo);
+        em.persist(producto);
         EntityManagerHelper.commit();
         EntityManagerHelper.closeEntityManager();
         
+    
     }
+    
 }
