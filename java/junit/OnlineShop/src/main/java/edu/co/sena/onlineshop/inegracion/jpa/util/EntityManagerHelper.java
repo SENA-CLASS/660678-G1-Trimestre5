@@ -24,7 +24,7 @@ public class EntityManagerHelper {
 
     static {
         emf = Persistence.createEntityManagerFactory("edu.co.sena_OnlineShop_jar_1.0-SNAPSHOTPU");
-        threadLocal = new ThreadLocal<EntityManager>();
+        threadLocal = new ThreadLocal<>();
         logger = Logger.getLogger("OnlineShop");
         logger.setLevel(Level.ALL);
     }
