@@ -46,11 +46,10 @@ public class EntityManagerHelperTest {
     @Test
     public void testGetEntityManager() {
         System.out.println("getEntityManager");
-        EntityManager expResult = null;
         EntityManager result = EntityManagerHelper.getEntityManager();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertNotNull(result);
+        
+        
     }
 
     /**
@@ -59,9 +58,8 @@ public class EntityManagerHelperTest {
     @Test
     public void testCloseEntityManager() {
         System.out.println("closeEntityManager");
-        EntityManagerHelper.closeEntityManager();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        EntityManager result = EntityManagerHelper.getEntityManager();
+        result.close();
     }
 
     /**

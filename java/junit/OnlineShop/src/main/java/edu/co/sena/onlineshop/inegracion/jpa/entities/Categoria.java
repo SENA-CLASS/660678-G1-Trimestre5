@@ -120,7 +120,9 @@ public class Categoria implements Serializable {
 
     @Override
     public String toString() {
-        return "edu.co.sena.onlineshop.inegracion.jpa.entities.Categoria[ idCategoria=" + idCategoria + " ]";
+        return "Categoria{" + "idCategoria=" + idCategoria + ", nombre=" + nombre + ", activa=" + activa + ", pariente=" + pariente +  '}';
     }
+
+    
     
 }
