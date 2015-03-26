@@ -6,9 +6,12 @@
 package edu.co.sena.onlineshop.inegracion.jpa.entities;
 
 import edu.co.sena.onlineshop.inegracion.jpa.util.EntityManagerHelper;
+import java.util.Collection;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -59,14 +62,53 @@ public class CategoriaTestJPA {
     // public void hello() {}
     @Test
     public void insertarCategoria(){
-        
         em = EntityManagerHelper.getEntityManager();
         EntityManagerHelper.beginTransaction();
         em.persist(categoria);
         EntityManagerHelper.commit();
         EntityManagerHelper.closeEntityManager();
-        
-        
-    
     }
+    
+    @Test
+    public void actualizarCategoria(){
+        em = EntityManagerHelper.getEntityManager();
+        EntityManagerHelper.beginTransaction();
+        categoria.setIdCategoria(1);
+        categoria.setActiva(Boolean.TRUE);
+        em.refresh(categoria);
+        EntityManagerHelper.commit();
+        EntityManagerHelper.closeEntityManager();
+    }
+    
+    @Test
+    public void buscarCategorias(){
+        em = EntityManagerHelper.getEntityManager();
+        EntityManagerHelper.beginTransaction();
+        Query q = em.createNamedQuery("Categoria.findAll");
+        List<Categoria> lis = q.getResultList();
+        for (Categoria categoriaT : lis) {
+            System.out.println(categoriaT.getIdCategoria()+" "+categoriaT.getNombre());
+        }
+        
+        EntityManagerHelper.commit();
+        EntityManagerHelper.closeEntityManager();
+    }
+    
+    @Test
+    public void eliminarCategoria(){
+        em = EntityManagerHelper.getEntityManager();
+        EntityManagerHelper.beginTransaction();
+        
+        Query q = em.createNamedQuery("Categoria.findAll");
+        List<Categoria> lis = q.getResultList();
+        
+        for (Categoria categoriaT : lis) {
+        em.remove(em.find(Categoria.class,categoriaT.getIdCategoria()));    
+        }
+        
+        
+        EntityManagerHelper.commit();
+        EntityManagerHelper.closeEntityManager();
+    }
+    
 }
